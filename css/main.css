@@ -61,6 +61,24 @@ a:hover {
     opacity: 0.7;
 }
 
+/* Barra de rolagem */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(4, 8, 27);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(40, 40, 40, 0.5);   
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 233, 233, 0.15);
+}
 
 /* Header */
 

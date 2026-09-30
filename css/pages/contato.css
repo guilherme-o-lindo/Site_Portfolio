@@ -54,6 +54,7 @@ main h2 {
     align-items: center;
 
     width: 100%;
+    height: 100%;
 
     padding: 30px 25px;
 
@@ -75,8 +76,10 @@ main h2 {
 
 /* Tipo */
 
-.contato h2 {
-    margin: 17px 0 18px;
+.contato a h2 {
+    margin: 17px 0 25px;
+    
+    margin-top: -5px;
 
     font-size: 11px;
     font-weight: 700;
