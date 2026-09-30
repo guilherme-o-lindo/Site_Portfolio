@@ -1,7 +1,7 @@
 main {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 70px 20px;
+    padding: 140px 20px;
 }
 
 
@@ -19,13 +19,11 @@ main {
     width: 250px;
     height: 250px;
 
-    flex-shrink: 0;
+    flex-shrink: 0; /* não deixa a imagem ser comprimida */
 
     object-fit: cover;
     
     border-radius: 50%;
-
-    border: 1px solid rgba(255, 255, 255, 0.9);
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.35),
@@ -43,7 +41,7 @@ main {
 .rotulo {
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 3px; /* define o espaçamento entre as letras de um texto*/
 
     color: rgba(255, 255, 255, 0.45);
 }
@@ -75,21 +73,22 @@ main {
 
 /* Linha */
 
-.historia::before {
-    content: "";
+.historia::before /* pseudo elemento (elemento fantasma) que é a linha*/ {
+    content: ""; /* define o conteudo do elemento fantasma, nesse caso, sendo vazio*/
 
-    position: absolute;
+    position: absolute; /* faz com que ele seja posicionado manualmente, dentro do elemento que tem a class historia, usando-o como referência*/
 
     top: 25px;
     bottom: 25px;
+
     left: 22px;
 
     width: 2px;
 
-    background: linear-gradient(to bottom,
+    background: linear-gradient(to bottom /* significa que vai até o bottom, começando do top*/ ,
             rgba(255, 255, 255, 0.03),
             rgba(255, 255, 255, 0.2),
-            rgba(255, 255, 255, 0.03));
+            rgba(255, 255, 255, 0.01)) /* define o degradê, indo do primeiro rgba até o último*/;
 }
 
 
@@ -104,6 +103,7 @@ main {
     column-gap: 40px;
 
     margin-bottom: 65px;
+    align-items: stretch;
 }
 
 
@@ -146,8 +146,10 @@ main {
 
 /* Bloco de texto */
 
-.historia-item>div {
-    padding: 25px 30px;
+.historia-item > div {
+    height: auto;
+    box-sizing: border-box;
+    padding: 25px 80px;
 
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
@@ -159,6 +161,10 @@ main {
         border-color 0.3s ease,
         background 0.3s ease,
         box-shadow 0.3s ease;
+
+    text-align: center;
+
+    padding-bottom: 45px;
 }
 
 
@@ -204,6 +210,10 @@ main {
     line-height: 1.8;
 
     color: rgba(255, 255, 255, 0.68);
+
+    text-indent: 25px;
+
+    text-align: left;
 }
 
 .historia-item p:last-child {

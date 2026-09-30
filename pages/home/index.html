@@ -19,46 +19,66 @@
         </span>
         <nav>
             <a href="../home/index.html" class="ativado">Início</a>
-            <a href="../sobre/index.html">Sobre Mim</a>
-            <a href="../contato/index.html">Entre em Contato</a>
+            <a href="../sobre/index.html">Sobre mim</a>
+            <a href="../contato/index.html">Entre em contato</a>
         </nav>
     </header>
 
     <main>
         <section class="informacoes">
             <section class="apresentacao">
+                <div class="apresentacao_conteudo">
+                    <h2>Olá, me chamo Guilherme Cordeiro.</h2>
+                    <p>Um simples estudante de informática da E.E.E.P Jeová Costa Lima. Bem vindo(a) ao meu portfólio.
+                    </p>
+                    <nav class="projetos">
+                        <a href="https://github.com/guilherme-o-lindo?tab=repositories" target="_blank">Meus
+                            Projetos</a>
+                    </nav>
+                </div>
                 <img src="../../src/imgs/Avatar1.jpg" alt="" id="avatar">
-                <h2>Olá, me chamo Guilherme Cordeiro.</h2>
-                <p>Um simples estudante de informática da E.E.E.P Jeová Costa Lima. Bem vindo(a) ao meu portfólio.</p>
-                <nav class="projetos">
-                    <a href="https://github.com/guilherme-o-lindo?tab=repositories" target="_blank">Meus Projetos</a>
-                </nav>
             </section>
 
             <section class="interesses">
-                <h2>Meus Interesses</h2>
+                <h2>Meus principais interesses</h2>
 
-                <article>
-                    <h3>Cibersegurança</h3>
-                    <img src="../../src/gifs/Cibersegurança.gif" alt="">
-                </article>
-
-                <article>
-                    <h3>Desenvolvedor de Software / DevSecOps</h3>
-                    <img src="../../src/gifs/DesenvolvedorSoftware.gif" alt="">
-                </article>
+                <div class="container">
+                    <article class="item">
+                        <h3>Cibersegurança</h3>
+                        <img src="../../src/gifs/Cibersegurança.gif" alt="">
+                        <p>Meu interesse nessa área surgiu principalmente do estudo de scripts (ferramentas de cheat no
+                            contexto de jogos) para o Roblox.
+                        </p>
+                        <p>
+                            Depois disso, vi mais sobre cibersegurança (principalmente
+                            no contexto web) no canal do <a href="https://www.youtube.com/@YuriRDev">@YuriRDev</a> e me
+                            interessei muito por essa área,
+                            aprofundando meus estudos ainda mais.
+                        </p>
+                    </article>
+                    <article class="item">
+                        <h3>Desenvolvedor de Software / DevSecOps</h3>
+                        <img src="../../src/gifs/DesenvolvedorSoftware.gif" alt="">
+                        <p>Eu semprei gostei de programação e de criar coisas, por isso esse meu interesse em
+                            desenvolvimento de software surgiu de forma natural.</p>
+                        <p>Já a parte de DevSecOps surgiu quando
+                            eu tentei alinhar o meu interesse em Cibersegurança com Desenvolvimento de Software, achando
+                            a carreira de DevSecOps</p>
+                    </article>
+                </div>
             </section>
 
             <section class="tecnologias">
-                <h2>Tecnologias</h2>
+                <h2>Tecnologias que utilizo</h2>
 
                 <article>
-                    <h3>Linguagens de Programação</h3>
+                    <h3>Linguagens</h3>
                     <ul class="lista_tecnologias">
                         <li>
                             <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
                                 <span>HTML</span>
                                 <img src="../../src/imgs/Logos/LogoHTML.png" alt="html logo">
+                                <span>Linguagem de Marcação</span>
                                 <div class="tooltip">
                                     HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa:
                                     "Linguagem
@@ -73,6 +93,7 @@
                             <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
                                 <span>CSS</span>
                                 <img src="../../src/imgs/Logos/LogoCSS.png" alt="css logo">
+                                <span>Linguagem de Estilização</span>
                                 <div class="tooltip">
                                     Folhas de Estilo em Cascata (CSS) é uma linguagem de folhas de estilo usada para
                                     especificar
@@ -89,6 +110,7 @@
                             <a href="https://docs.python.org/pt-br/3/" target="_blank">
                                 <span>Python</span>
                                 <img src="../../src/imgs/Logos/LogoPython.png" alt="python logo">
+                                <span>Linguagem de Programação</span>
                                 <div class="tooltip">
                                     Python é uma linguagem de programação de alto nível e de propósito geral que
                                     enfatiza a
@@ -102,6 +124,7 @@
                             <a href="https://www.php.net/docs.php" target="_blank">
                                 <span>PHP</span>
                                 <img src="../../src/imgs/Logos/LogoPHP.png" alt="php logo">
+                                <span>Linguagem de Programação</span>
                                 <div class="tooltip">
                                     PHP (um acrônimo recursivo para "PHP: Hypertext Preprocessor", originalmente
                                     Personal Home
@@ -119,6 +142,7 @@
                             <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
                                 <span>JavaScript</span>
                                 <img src="../../src/imgs/Logos/LogoJavaScript.png" alt="javascript logo">
+                                <span>Linguagem de Programação</span>
                                 <div class="tooltip">
                                     JavaScript (frequentemente abreviado como JS) é uma linguagem de programação
                                     interpretada
@@ -132,6 +156,7 @@
                             <a href="https://www.lua.org/docs.html" target="_blank">
                                 <span>Lua</span>
                                 <img src="../../src/imgs/Logos/LogoLua.png" alt="lua logo">
+                                <span>Linguagem de Programação</span>
                                 <div class="tooltip">
                                     Lua é uma linguagem de programação interpretada, de script em alto nível, com
                                     tipagem
@@ -156,6 +181,7 @@
                             <a href="https://code.visualstudio.com/docs" target="_blank">
                                 <span>Visual Studio Code</span>
                                 <img src="../../src/imgs/Logos/LogoVSCode.png" alt="vs code logo">
+                                <span>Editor de Código-Fonte</span>
                                 <div class="tooltip">
                                     O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para
                                     Windows,
@@ -168,6 +194,7 @@
                             <a href="https://git-scm.com/docs/git/pt_BR" target="_blank">
                                 <span>Git</span>
                                 <img src="../../src/imgs/Logos/LogoGit.png" alt="git logo">
+                                <span>Sistema de Controle de Versão</span>
                                 <div class="tooltip">
                                     Git é um sistema de softwarede controle de versão distribuído capaz
                                     de gerenciar versões de código-fonte ou dados.
@@ -178,6 +205,7 @@
                             <a href="https://docs.github.com/pt" target="_blank">
                                 <span>GitHub</span>
                                 <img src="../../src/imgs/Logos/LogoGitHub.png" alt="github logo">
+                                <span>Plataforma de Hospedagem de Código-Fonte</span>
                                 <div class="tooltip">
                                     O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de
                                     versão
@@ -190,6 +218,7 @@
                             <a href="https://portswigger.net/burp/documentation" target="_blank">
                                 <span>Burp Suite</span>
                                 <img src="../../src/imgs/Logos/LogoBurpSuite.png" alt="burp suite logo">
+                                <span>Proxy de Interceptação</span>
                                 <div class="tooltip">
                                     Burp Suite é um software desenvolvido em Java pela PortSwigger, para a realização de
                                     testes
