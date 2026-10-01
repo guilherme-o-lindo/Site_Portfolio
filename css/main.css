@@ -87,6 +87,16 @@ header {
     z-index: 1000;
 }
 
+.apresentacao_sobre_mim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentacao_sobre_mim span:last-of-type {
+    font-size: 13px;
+}
+
 .nav_bar {
     width: 100%; /* para ocupar o elemento pai totalmente, nesse caso, o header*/
     padding: 24px 50px;
