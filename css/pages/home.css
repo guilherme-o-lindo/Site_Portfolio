@@ -126,6 +126,7 @@
 .technology-card {
     position: relative;
     min-height: 170px;
+    padding: 16px;
     list-style: none;
     transition:
         transform 0.25s ease,
@@ -153,7 +154,7 @@
 }
 
 .technology-card span:last-of-type {
-    color: rgba(255, 255, 255, 0.42);
+    color: rgba(255, 255, 255, 0.65);
     font-size: 12px;
     text-align: center;
 }

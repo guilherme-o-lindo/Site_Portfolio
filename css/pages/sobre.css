@@ -80,7 +80,6 @@
 }
 
 .historia-card {
-    padding: clamp(24px, 6vw, 48px);
     transition:
         transform 0.3s ease,
         border-color 0.3s ease,
