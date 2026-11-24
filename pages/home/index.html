@@ -4,240 +4,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Portfólio de Guilherme Cordeiro, estudante de informática interessado em desenvolvimento de software e cibersegurança.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/pages/home.css">
     <link rel="shortcut icon" href="../../src/imgs/Favicon.ico" type="image/x-icon">
-
-    <title>Início</title>
+    <title>Início — Guilherme Cordeiro</title>
 </head>
 
-<body>
+<body class="flex min-h-screen flex-col overflow-x-hidden">
+    <a href="#conteudo"
+        class="fixed left-4 top-0 z-[100] -translate-y-full rounded-b-lg bg-white px-4 py-3 font-bold text-slate-950 focus:translate-y-0">
+        Pular para o conteúdo
+    </a>
+
     <header class="nav_bar">
-        <div class="apresentacao_sobre_mim">
-            <span>
-                Guilherme
-            </span>
-            <span>Estudante de Informática</span>
+        <div class="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-4 px-4 py-4 sm:px-8 lg:px-12">
+            <a href="../home/index.html" class="min-h-11 py-1 leading-tight">
+                <span class="brand-title block">Guilherme</span>
+                <span class="mt-1 block text-xs text-white/65">Estudante de Informática</span>
+            </a>
+
+            <nav class="hidden items-center gap-3 md:flex" aria-label="Navegação principal">
+                <a href="../home/index.html" aria-current="page" class="nav-link ativado min-h-11 rounded-lg px-4 py-3 font-semibold">Início</a>
+                <a href="../sobre/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Sobre mim</a>
+                <a href="../contato/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Entre em contato</a>
+            </nav>
+
+            <details class="relative md:hidden">
+                <summary class="glass-panel flex min-h-11 cursor-pointer list-none items-center px-4 font-semibold">Menu</summary>
+                <nav class="glass-panel glass-panel-strong absolute right-0 mt-3 grid w-56 gap-1 p-2 text-left"
+                    aria-label="Navegação móvel">
+                    <a href="../home/index.html" aria-current="page" class="nav-link ativado min-h-11 rounded-lg px-4 py-3 font-semibold">Início</a>
+                    <a href="../sobre/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Sobre mim</a>
+                    <a href="../contato/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Entre em contato</a>
+                </nav>
+            </details>
         </div>
-        <nav>
-            <a href="../home/index.html" class="ativado">Início</a>
-            <a href="../sobre/index.html">Sobre mim</a>
-            <a href="../contato/index.html">Entre em contato</a>
-        </nav>
     </header>
 
-    <main>
-        <section class="informacoes">
-            <section class="apresentacao">
-                <div class="apresentacao_conteudo">
-                    <h2>Olá, me chamo Guilherme Cordeiro.</h2>
-                    <p>Um simples estudante de informática da E.E.E.P Jeová Costa Lima. Bem vindo(a) ao meu portfólio.
-                    </p>
-                    <nav class="projetos">
-                        <a href="https://github.com/guilherme-o-lindo?tab=repositories" target="_blank">Meus
-                            Projetos</a>
-                    </nav>
-                </div>
-                <img src="../../src/imgs/Avatar1.jpg" alt="" id="avatar">
-            </section>
+    <main id="conteudo" class="flex-1">
+        <section class="apresentacao flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:justify-between"
+            aria-labelledby="titulo-principal">
+            <div class="apresentacao_conteudo">
+                <h1 id="titulo-principal">Olá, me chamo Guilherme Cordeiro.</h1>
+                <p>Um simples estudante de informática da E.E.E.P. Jeová Costa Lima. Bem-vindo(a) ao meu portfólio.</p>
+                <a href="#projetos"
+                    class="action-link mt-5 inline-flex min-h-11 items-center justify-center px-6 py-3 font-semibold">
+                    Meus projetos
+                </a>
+            </div>
+            <img src="../../src/imgs/Avatar1.jpg" id="avatar" alt="Avatar bem-humorado usado por Guilherme">
+        </section>
 
-            <section class="interesses">
-                <h2>Meus principais interesses</h2>
-
-                <div class="container">
-                    <article class="item">
-                        <h3>Cibersegurança</h3>
-                        <img src="../../src/gifs/Cibersegurança.gif" alt="">
-                        <p>Meu interesse nessa área surgiu principalmente do estudo de scripts (ferramentas de cheat no
-                            contexto de jogos) para o Roblox.
-                        </p>
-                        <p>
-                            Depois disso, vi mais sobre cibersegurança (principalmente
-                            no contexto web) no canal do <a href="https://www.youtube.com/@YuriRDev">@YuriRDev</a> e me
-                            interessei muito por essa área,
-                            aprofundando meus estudos ainda mais.
-                        </p>
-                    </article>
-                    <article class="item">
-                        <h3>Desenvolvedor de Software / DevSecOps</h3>
-                        <img src="../../src/gifs/DesenvolvedorSoftware.gif" alt="">
-                        <p>Eu semprei gostei de programação e de criar coisas, por isso esse meu interesse em
-                            desenvolvimento de software surgiu de forma natural.</p>
-                        <p>Já a parte de DevSecOps surgiu quando
-                            eu tentei alinhar o meu interesse em Cibersegurança com Desenvolvimento de Software, achando
-                            a carreira de DevSecOps.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section class="tecnologias">
-                <h2>Tecnologias que utilizo</h2>
-
+        <section id="projetos" class="scroll-mt-28" aria-labelledby="titulo-projetos">
+            <h2 id="titulo-projetos" class="section-title">Projetos em destaque</h2>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <article>
-                    <h3>Linguagens</h3>
-                    <ul class="lista_tecnologias">
-                        <li>
-                            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
-                                <span>HTML</span>
-                                <img src="../../src/imgs/Logos/LogoHTML.png" alt="html logo">
-                                <span>Linguagem de Marcação</span>
-                                <div class="tooltip">
-                                    HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa:
-                                    "Linguagem
-                                    de Marcação de Hipertexto") é uma linguagem de marcação utilizada na construção de
-                                    páginas
-                                    na
-                                    Web.
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
-                                <span>CSS</span>
-                                <img src="../../src/imgs/Logos/LogoCSS.png" alt="css logo">
-                                <span>Linguagem de Estilização</span>
-                                <div class="tooltip">
-                                    Folhas de Estilo em Cascata (CSS) é uma linguagem de folhas de estilo usada para
-                                    especificar
-                                    a
-                                    apresentação e o estilo de um documento escrito em uma linguagem de marcação , como
-                                    HTML. O
-                                    CSS
-                                    é uma tecnologia fundamental
-                                    da World Wide Web, juntamente com HTML e JavaScript.
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://docs.python.org/pt-br/3/" target="_blank">
-                                <span>Python</span>
-                                <img src="../../src/imgs/Logos/LogoPython.png" alt="python logo">
-                                <span>Linguagem de Programação</span>
-                                <div class="tooltip">
-                                    Python é uma linguagem de programação de alto nível e de propósito geral que
-                                    enfatiza a
-                                    legibilidade do código, a simplicidade e a facilidade de escrita com o uso de
-                                    indentação
-                                    significativa, uma extensa biblioteca padrão e coleta de lixo.
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.php.net/docs.php" target="_blank">
-                                <span>PHP</span>
-                                <img src="../../src/imgs/Logos/LogoPHP.png" alt="php logo">
-                                <span>Linguagem de Programação</span>
-                                <div class="tooltip">
-                                    PHP (um acrônimo recursivo para "PHP: Hypertext Preprocessor", originalmente
-                                    Personal Home
-                                    Page)
-                                    é uma linguagem interpretada livre, usada originalmente apenas para o
-                                    desenvolvimento de
-                                    aplicações presentes e atuantes no lado do servidor, capazes de gerar conteúdo
-                                    dinâmico na
-                                    World
-                                    Wide Web.
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
-                                <span>JavaScript</span>
-                                <img src="../../src/imgs/Logos/LogoJavaScript.png" alt="javascript logo">
-                                <span>Linguagem de Programação</span>
-                                <div class="tooltip">
-                                    JavaScript (frequentemente abreviado como JS) é uma linguagem de programação
-                                    interpretada
-                                    estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma
-                                    (protótipos,
-                                    orientado a objeto, imperativo e funcional).
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.lua.org/docs.html" target="_blank">
-                                <span>Lua</span>
-                                <img src="../../src/imgs/Logos/LogoLua.png" alt="lua logo">
-                                <span>Linguagem de Programação</span>
-                                <div class="tooltip">
-                                    Lua é uma linguagem de programação interpretada, de script em alto nível, com
-                                    tipagem
-                                    dinâmica e
-                                    multiparadigma, reflexiva e leve, projetada pela Tecgraf da PUC-Rio em 1993 para
-                                    expandir
-                                    aplicações em geral, de forma extensível (que une partes de um programa feitas em
-                                    mais de
-                                    uma
-                                    linguagem), para prototipagem e para ser embarcada em softwares complexos, como
-                                    jogos.
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                    <a class="project-card glass-panel block h-full" href="https://github.com/guilherme-o-lindo/guillotine-ai"
+                        target="_blank" rel="noopener noreferrer">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">v0.3.0</span>
+                        </div>
+                        <h3>Guillotine</h3>
+                        <p>Assistente pessoal de IA modular com conversas persistentes, ferramentas locais, integração MCP e controle por permissões.</p>
+                        <span class="mt-7 inline-flex min-h-11 items-center font-semibold underline decoration-white/40 underline-offset-4">Ver no GitHub</span>
+                    </a>
                 </article>
-
                 <article>
-                    <h3>Ferramentas</h3>
-                    <ul class="lista_tecnologias">
-                        <li>
-                            <a href="https://code.visualstudio.com/docs" target="_blank">
-                                <span>Visual Studio Code</span>
-                                <img src="../../src/imgs/Logos/LogoVSCode.png" alt="vs code logo">
-                                <span>Editor de Código-Fonte</span>
-                                <div class="tooltip">
-                                    O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para
-                                    Windows,
-                                    Linux
-                                    e macOS.
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://git-scm.com/docs/git/pt_BR" target="_blank">
-                                <span>Git</span>
-                                <img src="../../src/imgs/Logos/LogoGit.png" alt="git logo">
-                                <span>Sistema de Controle de Versão</span>
-                                <div class="tooltip">
-                                    Git é um sistema de softwarede controle de versão distribuído capaz
-                                    de gerenciar versões de código-fonte ou dados.
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://docs.github.com/pt" target="_blank">
-                                <span>GitHub</span>
-                                <img src="../../src/imgs/Logos/LogoGitHub.png" alt="github logo">
-                                <span>Plataforma de Hospedagem de Código-Fonte</span>
-                                <div class="tooltip">
-                                    O GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de
-                                    versão
-                                    usando
-                                    o Git.
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://portswigger.net/burp/documentation" target="_blank">
-                                <span>Burp Suite</span>
-                                <img src="../../src/imgs/Logos/LogoBurpSuite.png" alt="burp suite logo">
-                                <span>Proxy de Interceptação</span>
-                                <div class="tooltip">
-                                    Burp Suite é um software desenvolvido em Java pela PortSwigger, para a realização de
-                                    testes
-                                    de
-                                    segurança em aplicações web.
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                    <a class="project-card glass-panel block h-full" href="https://github.com/guilherme-o-lindo/Jogo-Educativo"
+                        target="_blank" rel="noopener noreferrer">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">Jogo web</span>
+                        </div>
+                        <h3>Oficina de TI</h3>
+                        <p>Jogo educativo no navegador com chamados de suporte de uma escola, bancada interativa e progresso local.</p>
+                        <span class="mt-7 inline-flex min-h-11 items-center font-semibold underline decoration-white/40 underline-offset-4">Ver no GitHub</span>
+                    </a>
                 </article>
-            </section>
+                <article class="md:col-span-2 lg:col-span-1">
+                    <a class="project-card glass-panel block h-full" href="https://github.com/guilherme-o-lindo/Pauta-Publica"
+                        target="_blank" rel="noopener noreferrer">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="project-tag">Full Stack</span>
+                            <span class="project-tag">Em desenvolvimento</span>
+                        </div>
+                        <h3>Pauta Pública</h3>
+                        <p>Projeto open source de estudo para tornar informações políticas brasileiras mais claras, acessíveis e rastreáveis.</p>
+                        <span class="mt-7 inline-flex min-h-11 items-center font-semibold underline decoration-white/40 underline-offset-4">Ver no GitHub</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="interesses" aria-labelledby="titulo-interesses">
+            <h2 id="titulo-interesses" class="section-title">Meus principais interesses</h2>
+            <div class="grid gap-8 md:grid-cols-2">
+                <article class="item glass-panel">
+                    <h3>Cibersegurança</h3>
+                    <img src="../../src/gifs/Cibersegurança.gif" alt="Animação bem-humorada sobre cibersegurança">
+                    <p>Meu interesse nessa área surgiu principalmente do estudo de scripts no contexto de jogos para Roblox.</p>
+                    <p>Depois disso, conheci mais sobre cibersegurança, principalmente no contexto web, e aprofundei meus estudos.</p>
+                </article>
+                <article class="item glass-panel">
+                    <h3>Desenvolvimento de Software e DevSecOps</h3>
+                    <img src="../../src/gifs/DesenvolvedorSoftware.gif" alt="Animação de uma pessoa programando">
+                    <p>Sempre gostei de programação e de criar coisas, então meu interesse em desenvolvimento de software surgiu naturalmente.</p>
+                    <p>DevSecOps apareceu como uma forma de alinhar meus interesses em cibersegurança e desenvolvimento.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="tecnologias" aria-labelledby="titulo-tecnologias">
+            <h2 id="titulo-tecnologias" class="section-title">Tecnologias que utilizo</h2>
+
+            <h3 class="mb-7 text-center text-2xl font-semibold">Linguagens</h3>
+            <ul class="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-3 lg:gap-8">
+                <li class="technology-card glass-panel">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>HTML</span><img src="../../src/imgs/Logos/LogoHTML.png" alt="Logo do HTML"><span>Linguagem de marcação</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>CSS</span><img src="../../src/imgs/Logos/LogoCSS.png" alt="Logo do CSS"><span>Linguagem de estilização</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://docs.python.org/pt-br/3/" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>Python</span><img src="../../src/imgs/Logos/LogoPython.png" alt="Logo do Python"><span>Linguagem de programação</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://www.php.net/docs.php" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>PHP</span><img src="../../src/imgs/Logos/LogoPHP.png" alt="Logo do PHP"><span>Linguagem de programação</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>JavaScript</span><img src="../../src/imgs/Logos/LogoJavaScript.png" alt="Logo do JavaScript"><span>Linguagem de programação</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://www.lua.org/docs.html" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>Lua</span><img src="../../src/imgs/Logos/LogoLua.png" alt="Logo da linguagem Lua"><span>Linguagem de programação</span>
+                    </a>
+                </li>
+            </ul>
+
+            <h3 class="mb-7 mt-14 text-center text-2xl font-semibold">Ferramentas</h3>
+            <ul class="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-4 lg:gap-8">
+                <li class="technology-card glass-panel">
+                    <a href="https://code.visualstudio.com/docs" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>VS Code</span><img src="../../src/imgs/Logos/LogoVSCode.png" alt="Logo do Visual Studio Code"><span>Editor de código</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://git-scm.com/docs/git/pt_BR" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>Git</span><img src="../../src/imgs/Logos/LogoGit.png" alt="Logo do Git"><span>Controle de versão</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://docs.github.com/pt" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>GitHub</span><img src="../../src/imgs/Logos/LogoGitHub.png" alt="Logo do GitHub"><span>Hospedagem de código</span>
+                    </a>
+                </li>
+                <li class="technology-card glass-panel">
+                    <a href="https://portswigger.net/burp/documentation" target="_blank" rel="noopener noreferrer"
+                        class="flex h-full min-h-11 flex-col items-center justify-center gap-3 p-4">
+                        <span>Burp Suite</span><img src="../../src/imgs/Logos/LogoBurpSuite.png" alt="Logo do Burp Suite"><span>Proxy de interceptação</span>
+                    </a>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Guilherme Cordeiro. Feito com HTML e CSS.</p>
+        <div class="mx-auto flex w-full max-w-[1200px] flex-col gap-3 px-4 py-7 text-center text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <p class="m-0">© 2026 Guilherme Cordeiro. Feito com HTML, CSS e Tailwind.</p>
+            <a href="../contato/index.html" class="min-h-11 py-3 font-semibold text-white/80 underline underline-offset-4">Entre em contato</a>
+        </div>
     </footer>
 </body>
 

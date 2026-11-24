@@ -4,108 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Entre em contato com Guilherme Cordeiro por e-mail, GitHub ou WhatsApp.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/pages/contato.css">
     <link rel="shortcut icon" href="../../src/imgs/Favicon.ico" type="image/x-icon">
-
-    <title>Meu contato</title>
+    <title>Contato — Guilherme Cordeiro</title>
 </head>
 
-<body>
+<body class="flex min-h-screen flex-col overflow-x-hidden">
+    <a href="#conteudo"
+        class="fixed left-4 top-0 z-[100] -translate-y-full rounded-b-lg bg-white px-4 py-3 font-bold text-slate-950 focus:translate-y-0">
+        Pular para o conteúdo
+    </a>
+
     <header class="nav_bar">
-        <div class="apresentacao_sobre_mim">
-            <span>
-                Guilherme
-            </span>
-            <span>Estudante de Informática</span>
+        <div class="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-4 px-4 py-4 sm:px-8 lg:px-12">
+            <a href="../home/index.html" class="min-h-11 py-1 leading-tight">
+                <span class="brand-title block">Guilherme</span>
+                <span class="mt-1 block text-xs text-white/65">Estudante de Informática</span>
+            </a>
+            <nav class="hidden items-center gap-3 md:flex" aria-label="Navegação principal">
+                <a href="../home/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Início</a>
+                <a href="../sobre/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Sobre mim</a>
+                <a href="../contato/index.html" aria-current="page" class="nav-link ativado min-h-11 rounded-lg px-4 py-3 font-semibold">Contato</a>
+            </nav>
+            <details class="relative md:hidden">
+                <summary class="glass-panel flex min-h-11 cursor-pointer list-none items-center px-4 font-semibold">Menu</summary>
+                <nav class="glass-panel glass-panel-strong absolute right-0 mt-3 grid w-56 gap-1 p-2 text-left"
+                    aria-label="Navegação móvel">
+                    <a href="../home/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Início</a>
+                    <a href="../sobre/index.html" class="nav-link min-h-11 rounded-lg px-4 py-3 font-semibold">Sobre mim</a>
+                    <a href="../contato/index.html" aria-current="page" class="nav-link ativado min-h-11 rounded-lg px-4 py-3 font-semibold">Contato</a>
+                </nav>
+            </details>
         </div>
-        <nav>
-            <a href="../home/index.html">Início</a>
-            <a href="../sobre/index.html">Sobre mim</a>
-            <a href="../contato/index.html" class="ativado">Entre em contato</a>
-        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Vamos entrosar?</h2>
-
-            <p class="subtitulo">
-                Caso queira entrar em contato, me conhecer melhor ou só conversar,
-                você pode me encontrar por aqui:
-            </p>
+    <main id="conteudo" class="contato-main flex-1">
+        <section aria-labelledby="titulo-contato">
+            <h1 id="titulo-contato">Vamos entrosar?</h1>
+            <p class="subtitulo">Caso queira entrar em contato, me conhecer melhor ou só conversar, você pode me encontrar por aqui:</p>
         </section>
 
         <section aria-label="Formas de contato">
-
-            <address class="contatos">
-
-                <article class="contato">
-
-
+            <address class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+                <article class="contato glass-panel">
                     <a href="mailto:guilherme.silva782@aluno.ce.gov.br">
-                        <h2>EMAIL</h2>
-
-                        <img src="../../src/imgs/Logos/LogoGmail.jpg" alt="Gmail">
-
-                        <span class="contato-info">
-                            guilherme.silva782@aluno.ce.gov.br
-                        </span>
-
-                        <span class="contato-acao">
-                            Enviar email →
-                        </span>
+                        <h2>E-MAIL</h2>
+                        <img src="../../src/imgs/Logos/LogoGmail.jpg" alt="Logo do Gmail">
+                        <span class="contato-info">guilherme.silva782@aluno.ce.gov.br</span>
+                        <span class="contato-acao">Enviar e-mail →</span>
                     </a>
                 </article>
-
-
-                <article class="contato">
-
-
+                <article class="contato glass-panel">
                     <a href="https://github.com/guilherme-o-lindo" target="_blank" rel="noopener noreferrer">
                         <h2>GITHUB</h2>
-
-                        <img src="../../src/imgs/Logos/LogoGitHub.png" alt="GitHub">
-
-                        <span class="contato-info">
-                            guilherme-o-lindo
-                        </span>
-
-                        <span class="contato-acao">
-                            Ver meu GitHub →
-                        </span>
+                        <img src="../../src/imgs/Logos/LogoGitHub.png" alt="Logo do GitHub">
+                        <span class="contato-info">guilherme-o-lindo</span>
+                        <span class="contato-acao">Ver meu GitHub →</span>
                     </a>
                 </article>
-
-
-                <article class="contato">
-
+                <article class="contato glass-panel md:col-span-2 lg:col-span-1">
                     <a href="https://wa.me/5588999067064" target="_blank" rel="noopener noreferrer">
                         <h2>WHATSAPP</h2>
-
-                        <img src="../../src/imgs/Logos/LogoWhatsApp.png" alt="WhatsApp">
-
-                        <span class="contato-info">
-                            +55 88 99906-7064
-                        </span>
-
-                        <span class="contato-acao">
-                            Enviar mensagem →
-                        </span>
+                        <img src="../../src/imgs/Logos/LogoWhatsApp.png" alt="Logo do WhatsApp">
+                        <span class="contato-info">+55 88 99906-7064</span>
+                        <span class="contato-acao">Enviar mensagem →</span>
                     </a>
                 </article>
-
             </address>
-
         </section>
-
     </main>
 
     <footer>
-        <p>© 2026 Guilherme Cordeiro. Feito com HTML e CSS.</p>
+        <div class="mx-auto flex w-full max-w-[1200px] flex-col gap-3 px-4 py-7 text-center text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+            <p class="m-0">© 2026 Guilherme Cordeiro. Feito com HTML, CSS e Tailwind.</p>
+            <a href="../home/index.html#projetos" class="min-h-11 py-3 font-semibold text-white/80 underline underline-offset-4">Ver projetos</a>
+        </div>
     </footer>
-
 </body>
 
 </html>

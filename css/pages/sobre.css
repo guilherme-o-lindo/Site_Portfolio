@@ -1,221 +1,128 @@
-main {
+.sobre-main {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 140px 20px;
 }
 
-
-/* Introdução */
-
 .perfil {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-
     margin-bottom: 100px;
 }
 
 .perfil img {
-    width: 250px;
-    height: 250px;
-
-    flex-shrink: 0; /* não deixa a imagem ser comprimida */
-
-    object-fit: cover;
-    
+    width: min(250px, 70vw);
+    aspect-ratio: 1;
+    flex-shrink: 0;
     border-radius: 50%;
-
+    object-fit: cover;
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.35),
         0 0 0 10px rgba(255, 255, 255, 0.04);
-
-    transition:
-        transform 0.25s ease
+    transition: transform 0.25s ease;
 }
 
 .perfil img:hover {
     transform: scale(1.05);
 }
 
-
-.rotulo {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px; /* define o espaçamento entre as letras de um texto*/
-
-    color: rgba(255, 255, 255, 0.45);
-}
-
-.perfil h2 {
-    margin: 12px 0 20px;
-
-    font-size: clamp(40px, 5vw, 60px);
-
+.perfil h1 {
+    margin: 0 0 20px;
+    font-size: clamp(2.5rem, 6vw, 4rem);
     line-height: 1.05;
+    letter-spacing: -0.035em;
 }
 
-.perfil-intro p {
+.perfil p {
     margin: 0;
-
+    color: rgba(255, 255, 255, 0.68);
     font-size: 19px;
-    line-height: 1.6;
-
-    color: rgba(255, 255, 255, 0.65);
 }
-
-
-/* História */
 
 .historia {
     position: relative;
-    padding: 10px 0;
 }
 
-/* Linha */
-
-.historia::before /* pseudo elemento (elemento fantasma) que é a linha*/ {
-    content: ""; /* define o conteudo do elemento fantasma, nesse caso, sendo vazio*/
-
-    position: absolute; /* faz com que ele seja posicionado manualmente, dentro do elemento que tem a class historia, usando-o como referência*/
-
-    top: 25px;
-    bottom: 25px;
-
+.historia::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
     left: 22px;
-
     width: 2px;
-
-    background: linear-gradient(to bottom /* significa que vai até o bottom, começando do top*/ ,
-            rgba(255, 255, 255, 0.03),
-            rgba(255, 255, 255, 0.2),
-            rgba(255, 255, 255, 0.01)) /* define o degradê, indo do primeiro rgba até o último*/;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.24),
+        rgba(255, 255, 255, 0.02)
+    );
 }
-
-
-/* Item */
 
 .historia-item {
     position: relative;
-
-    display: grid;
-    grid-template-columns: 45px 1fr;
-
-    column-gap: 40px;
-
-    margin-bottom: 65px;
-    align-items: stretch;
+    margin-bottom: 64px;
 }
-
-
-/* Número */
 
 .historia-numero {
     position: relative;
     z-index: 2;
-
     display: flex;
-
-    align-items: center;
-    justify-content: center;
-
     width: 45px;
     height: 45px;
-
-    border-radius: 50%;
-
-    background: #181818;
-
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.25);
-
+    border-radius: 50%;
+    background: #111526;
+    color: rgba(255, 255, 255, 0.72);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
-
-    color: rgba(255, 255, 255, 0.65);
-
     box-shadow:
         0 0 0 6px rgba(255, 255, 255, 0.02),
         0 8px 20px rgba(0, 0, 0, 0.25);
+}
 
+.historia-card {
+    padding: clamp(24px, 6vw, 48px);
     transition:
         transform 0.3s ease,
         border-color 0.3s ease,
-        color 0.3s ease;
+        background-color 0.3s ease;
 }
 
-
-/* Bloco de texto */
-
-.historia-item > div {
-    height: auto;
-    box-sizing: border-box;
-    padding: 25px 80px;
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
-
-    background: rgba(255, 255, 255, 0.035);
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
-
-    text-align: center;
-
-    padding-bottom: 45px;
+.historia-item:hover .historia-card {
+    transform: translateX(5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.075);
 }
 
-
-/* Hover */
-
-.historia-item:hover .historia-numero {
-    transform: scale(1.08);
-
-    border-color: rgba(255, 255, 255, 0.45);
-
-    color: white;
+.historia-card h2 {
+    margin: 0 0 16px;
+    font-size: clamp(1.6rem, 4vw, 2rem);
 }
 
-.historia-item:hover > div {
-    transform: translateX(6px);
-
-    border-color: rgba(255, 255, 255, 0.18);
-
-    background: rgba(255, 255, 255, 0.055);
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.18);
-}
-
-
-/* Títulos */
-
-.historia-item h2 {
-    margin: 0 0 15px;
-
-    font-size: 28px;
-}
-
-
-/* Texto */
-
-.historia-item p {
-    max-width: 700px;
-
+.historia-card p {
     margin: 0 0 18px;
-
-    font-size: 17px;
-    line-height: 1.8;
-
     color: rgba(255, 255, 255, 0.68);
-
-    text-indent: 25px;
-
-    text-align: left;
+    font-size: 17px;
 }
 
-.historia-item p:last-child {
+.historia-card p:last-child {
     margin-bottom: 0;
+}
+
+@media (max-width: 639px) {
+    .perfil {
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+    .perfil p {
+        font-size: 17px;
+    }
+
+    .historia::before {
+        left: 21px;
+    }
+
+    .historia-card {
+        min-width: 0;
+    }
 }

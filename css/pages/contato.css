@@ -1,128 +1,82 @@
-main {
+.contato-main {
+    max-width: 1000px;
     text-align: center;
-    padding: 70px 20px;
 }
 
-main h2 {
-    font-size: 4vw;
-    margin-bottom: 15px;
+.contato-main h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.75rem, 7vw, 4.8rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
 }
 
 .subtitulo {
-    max-width: 600px;
-    margin: 0 auto 50px;
-
+    max-width: 620px;
+    margin: 0 auto 52px;
+    color: rgba(255, 255, 255, 0.68);
     font-size: 18px;
-    line-height: 1.6;
-
-    color: rgba(255, 255, 255, 0.65);
-}
-
-
-/* Cards */
-
-.contatos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* tem no minimo 230px e pode ocupar ate 1fr */
-
-    gap: 35px;
-
-    max-width: 900px;
-    margin: 0 auto;
-
-    align-items: stretch;
 }
 
 .contato {
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 18px;
-
-    background: rgba(255, 255, 255, 0.06);
-
+    min-width: 0;
     transition:
         transform 0.3s ease,
         border-color 0.3s ease,
-        box-shadow 0.3s ease;
+        background-color 0.3s ease;
 }
 
-
-/* Link */
+.contato:hover,
+.contato:focus-within {
+    transform: translateY(-7px);
+    border-color: rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.085);
+}
 
 .contato > a {
     display: flex;
+    min-height: 290px;
     flex-direction: column;
     align-items: center;
-
-    width: 100%;
-    height: 100%;
-
     padding: 30px 25px;
-
-    text-align: center;
-
-    color: inherit;
-    text-decoration: none;
 }
 
-
-/* Hover */
-
-.contato:hover {
-    transform: translateY(-8px);
-
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
-
-/* Tipo */
-
-.contato a h2 {
-    margin: 17px 0 25px;
-    
-    margin-top: -5px;
-
-    font-size: 11px;
+.contato h2 {
+    margin: 14px 0 20px;
+    color: rgba(255, 255, 255, 0.52);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
-
-    color: rgba(255, 255, 255, 0.45);
 }
-
-
-/* Logo */
 
 .contato img {
     width: 65px;
     height: 65px;
-
-    object-fit: contain;
-
-    margin-bottom: 18px;
-
+    margin-bottom: 12px;
     border-radius: 14px;
+    object-fit: contain;
 }
-
-
-/* Informação */
 
 .contato-info {
+    overflow-wrap: anywhere;
+    color: #fff;
     font-size: 16px;
     font-weight: 600;
-
-    color: white;
-
-    word-break: break-word; /* faz o texto quebrar uma palavra quando ela for grande demais para caber na largura disponível */
 }
 
-
-/* Ação */
-
 .contato-acao {
-    margin-top: 20px;
-
+    margin-top: auto;
+    padding-top: 22px;
+    color: rgba(255, 255, 255, 0.58);
     font-size: 14px;
+}
 
-    color: rgba(255, 255, 255, 0.5);
+@media (max-width: 639px) {
+    .subtitulo {
+        margin-bottom: 38px;
+        font-size: 16px;
+    }
 
-    transition: color 0.25s ease;
+    .contato > a {
+        min-height: 250px;
+    }
 }
